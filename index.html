@@ -9,13 +9,11 @@
     <meta name="description" content="Персональный тренер Карен Карапетян в Армавире (Краснодарский край). Индивидуальные тренировки, коррекция фигуры, ОФП, онлайн-ведение, программы питания. Помогу похудеть, подтянуть тело и улучшить здоровье." />
     <meta name="keywords" content="тренер Армавир, фитнес Армавир, похудение Армавир, спортзал Армавир, персональный тренер Краснодарский край, ОФП, коррекция фигуры, онлайн-тренер, программы питания, дзюдо, Карен Карапетян, тренировки для начинающих, подростки 16+" />
 
-    <!-- Гео-метатеги -->
     <meta name="geo.region" content="RU-KDA" />
     <meta name="geo.placename" content="Армавир" />
     <meta name="geo.position" content="45.0014;41.1323" />
     <meta name="ICBM" content="45.0014, 41.1323" />
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Персональный тренер Карен Карапетян | Фитнес, похудение, спорт в Армавире" />
     <meta property="og:description" content="Индивидуальные тренировки, коррекция фигуры, ОФП, онлайн-ведение, программы питания в Армавире. Помогу достичь целей." />
     <meta property="og:type" content="website" />
@@ -24,15 +22,13 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Персональный тренер Карен Карапетян в Армавире" />
     <meta name="twitter:description" content="Фитнес, похудение, спорт, коррекция фигуры. Индивидуальные программы тренировок и питания." />
 
-    <!-- Canonical -->
     <link rel="canonical" href="https://karenfit.ru" />
 
-    <!-- ===== STRUCTURED DATA (JSON-LD) ===== -->
+    <!-- ===== STRUCTURED DATA ===== -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -46,30 +42,10 @@
                 "addressRegion": "Краснодарский край",
                 "addressCountry": "RU"
             },
-            "telephone": "+7-xxx-xxx-xx-xx",
             "url": "https://karenfit.ru",
-            "sameAs": [
-                "https://t.me/mr_fitness"
-            ],
-            "hasOccupation": {
-                "@type": "Occupation",
-                "name": "Персональный тренер",
-                "occupationalCategory": "Фитнес-инструктор"
-            },
-            "knowsAbout": [
-                "Коррекция фигуры",
-                "Общая физическая подготовка",
-                "Индивидуальные программы питания",
-                "Онлайн-тренировки",
-                "Тренировки для начинающих",
-                "Тренировки для подростков"
-            ],
-            "experienceRequirements": "3 года",
-            "sport": "Дзюдо (КМС)"
+            "sameAs": ["https://t.me/mr_fitness"]
         }
     </script>
-
-    <!-- Дополнительный JSON-LD для локального бизнеса -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -87,11 +63,11 @@
             "availableChannel": {
                 "@type": "ServiceChannel",
                 "serviceUrl": "https://t.me/mr_fitness"
-            }
+            },
+            "telephone": "+79180931237"
         }
     </script>
 
-    <!-- ===== PREVIOUS STYLES ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
@@ -149,49 +125,52 @@
         .bg-animation .orb {
             position: absolute;
             border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.25;
-            animation: floatOrb 16s infinite alternate ease-in-out;
+            filter: blur(120px);
+            opacity: 0.35;
+            animation: floatOrb 18s infinite alternate ease-in-out;
         }
 
         .bg-animation .orb:nth-child(1) {
-            width: 700px;
-            height: 700px;
-            top: -15%;
-            left: -10%;
+            width: 800px;
+            height: 800px;
+            top: -20%;
+            left: -15%;
             background: radial-gradient(circle, #00b4b0, transparent 70%);
-            animation-duration: 14s;
+            animation-duration: 16s;
+            opacity: 0.4;
         }
 
         .bg-animation .orb:nth-child(2) {
-            width: 550px;
-            height: 550px;
-            bottom: -20%;
-            right: -5%;
+            width: 650px;
+            height: 650px;
+            bottom: -25%;
+            right: -10%;
             background: radial-gradient(circle, #f77f3f, transparent 70%);
-            animation-duration: 18s;
-            animation-delay: -3s;
+            animation-duration: 20s;
+            animation-delay: -5s;
+            opacity: 0.35;
         }
 
         .bg-animation .orb:nth-child(3) {
-            width: 450px;
-            height: 450px;
-            top: 40%;
-            left: 30%;
+            width: 500px;
+            height: 500px;
+            top: 35%;
+            left: 25%;
             background: radial-gradient(circle, #2a9d8f, transparent 70%);
-            animation-duration: 20s;
-            animation-delay: -7s;
+            animation-duration: 22s;
+            animation-delay: -9s;
+            opacity: 0.3;
         }
 
         .bg-animation .orb:nth-child(4) {
-            width: 350px;
-            height: 350px;
-            top: 10%;
-            right: 20%;
+            width: 400px;
+            height: 400px;
+            top: 5%;
+            right: 15%;
             background: radial-gradient(circle, #00b4b0, transparent 70%);
-            animation-duration: 16s;
-            animation-delay: -10s;
-            opacity: 0.15;
+            animation-duration: 18s;
+            animation-delay: -12s;
+            opacity: 0.25;
         }
 
         @keyframes floatOrb {
@@ -199,18 +178,18 @@
                 transform: translate(0, 0) scale(1);
             }
             33% {
-                transform: translate(80px, -100px) scale(1.2);
+                transform: translate(90px, -110px) scale(1.25);
             }
             66% {
-                transform: translate(-60px, 80px) scale(0.85);
+                transform: translate(-70px, 90px) scale(0.8);
             }
             100% {
-                transform: translate(40px, -30px) scale(1.1);
+                transform: translate(50px, -40px) scale(1.15);
             }
         }
 
-        /* ===== FLOATING ICONS ===== */
-        .floating-icons {
+        /* ===== BIG FLOATING SPORT ICONS ===== */
+        .floating-big {
             position: fixed;
             inset: 0;
             z-index: 1;
@@ -218,85 +197,80 @@
             overflow: hidden;
         }
 
-        .floating-icons .float-item {
+        .floating-big .big-item {
             position: absolute;
-            font-size: 2.8rem;
-            color: rgba(0, 180, 176, 0.06);
-            animation: floatIcon 20s infinite alternate ease-in-out;
-            transition: transform 0.3s;
+            font-size: 10rem;
+            animation: bigFloat 28s infinite alternate ease-in-out, colorShift 20s infinite alternate ease-in-out;
+            transform-origin: center;
+            filter: blur(0.5px);
+            will-change: transform, color, opacity;
         }
 
-        .floating-icons .float-item:nth-child(1) {
-            top: 15%;
-            left: 5%;
-            animation-duration: 22s;
-            font-size: 4rem;
-            color: rgba(247, 127, 63, 0.05);
-        }
-        .floating-icons .float-item:nth-child(2) {
-            top: 60%;
-            right: 3%;
-            animation-duration: 18s;
-            animation-delay: -4s;
-            font-size: 3.2rem;
-            color: rgba(0, 180, 176, 0.07);
-        }
-        .floating-icons .float-item:nth-child(3) {
-            bottom: 10%;
-            left: 20%;
-            animation-duration: 24s;
-            animation-delay: -8s;
-            font-size: 3.6rem;
-            color: rgba(247, 127, 63, 0.04);
-        }
-        .floating-icons .float-item:nth-child(4) {
-            top: 35%;
-            left: 70%;
-            animation-duration: 20s;
-            animation-delay: -2s;
-            font-size: 2.6rem;
-            color: rgba(42, 157, 143, 0.06);
-        }
-        .floating-icons .float-item:nth-child(5) {
-            top: 75%;
-            left: 55%;
-            animation-duration: 26s;
-            animation-delay: -6s;
-            font-size: 3rem;
-            color: rgba(0, 180, 176, 0.05);
-        }
-        .floating-icons .float-item:nth-child(6) {
-            top: 20%;
-            left: 45%;
-            animation-duration: 28s;
-            animation-delay: -12s;
-            font-size: 2.2rem;
-            color: rgba(247, 127, 63, 0.04);
-        }
-        .floating-icons .float-item:nth-child(7) {
-            top: 80%;
-            left: 10%;
-            animation-duration: 22s;
-            animation-delay: -9s;
-            font-size: 2.8rem;
-            color: rgba(0, 180, 176, 0.06);
-        }
-
-        @keyframes floatIcon {
+        @keyframes colorShift {
             0% {
-                transform: translate(0, 0) rotate(0deg) scale(1);
+                color: rgba(0, 180, 176, 0.25);
             }
-            25% {
-                transform: translate(50px, -70px) rotate(12deg) scale(1.15);
+            33% {
+                color: rgba(247, 127, 63, 0.25);
             }
-            50% {
-                transform: translate(-30px, 40px) rotate(-8deg) scale(0.85);
-            }
-            75% {
-                transform: translate(70px, 30px) rotate(10deg) scale(1.1);
+            66% {
+                color: rgba(42, 157, 143, 0.25);
             }
             100% {
-                transform: translate(-20px, -50px) rotate(-5deg) scale(0.95);
+                color: rgba(0, 180, 176, 0.25);
+            }
+        }
+
+        .floating-big .big-item:nth-child(1) {
+            top: 8%;
+            left: 5%;
+            font-size: 16rem;
+            animation-duration: 32s, 22s;
+            animation-delay: -2s, -4s;
+        }
+        .floating-big .big-item:nth-child(2) {
+            bottom: 10%;
+            right: 5%;
+            font-size: 18rem;
+            animation-duration: 30s, 24s;
+            animation-delay: -7s, -2s;
+        }
+        .floating-big .big-item:nth-child(3) {
+            top: 45%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14rem;
+            animation-duration: 36s, 26s;
+            animation-delay: -12s, -8s;
+        }
+        .floating-big .big-item:nth-child(4) {
+            top: 70%;
+            left: 15%;
+            font-size: 12rem;
+            animation-duration: 26s, 20s;
+            animation-delay: -4s, -10s;
+        }
+
+        @keyframes bigFloat {
+            0% {
+                transform: translate(0, 0) rotate(0deg) scale(1);
+                opacity: 0.4;
+            }
+            25% {
+                transform: translate(100px, -80px) rotate(12deg) scale(1.15);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translate(-60px, 90px) rotate(-8deg) scale(0.85);
+                opacity: 0.35;
+            }
+            75% {
+                transform: translate(130px, 40px) rotate(18deg) scale(1.1);
+                opacity: 0.9;
+            }
+            100% {
+                transform: translate(-30px, -60px) rotate(-5deg) scale(0.95);
+                opacity: 0.45;
             }
         }
 
@@ -306,8 +280,8 @@
             inset: 0;
             z-index: 0;
             background-image:
-                linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
             background-size: 50px 50px;
             pointer-events: none;
         }
@@ -364,25 +338,37 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            padding: 16px 0;
-            background: rgba(11, 18, 21, 0.75);
+            padding: 12px 0;
+            background: rgba(11, 18, 21, 0.8);
             backdrop-filter: blur(18px) saturate(180%);
             border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            transition: all var(--transition);
         }
 
         .navbar .container {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .logo {
-            font-size: 1.4rem;
-            font-weight: 800;
+            font-size: 1.2rem;
+            font-weight: 700;
             letter-spacing: -0.02em;
+            color: var(--text-primary);
+            text-decoration: none;
         }
         .logo span {
             color: var(--teal);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
         .nav-cta {
@@ -390,7 +376,7 @@
             color: #0b1215;
             font-weight: 700;
             font-size: 0.9rem;
-            padding: 10px 28px;
+            padding: 10px 24px;
             border-radius: 60px;
             transition: all var(--transition);
             border: none;
@@ -404,6 +390,28 @@
             transform: scale(1.04);
             box-shadow: 0 8px 32px var(--orange-glow);
             color: #0b1215;
+        }
+
+        .nav-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            color: var(--teal);
+            background: rgba(0, 180, 176, 0.1);
+            padding: 8px 16px;
+            border-radius: 60px;
+            border: 1px solid rgba(0, 180, 176, 0.2);
+            transition: all var(--transition);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .nav-phone:hover {
+            background: rgba(0, 180, 176, 0.2);
+            transform: scale(1.03);
+        }
+        .nav-phone i {
+            font-size: 1rem;
         }
 
         /* ===== HERO ===== */
@@ -507,6 +515,7 @@
             display: inline-flex;
             align-items: center;
             gap: 12px;
+            text-decoration: none;
         }
         .btn-primary:hover {
             background: #00d0cc;
@@ -528,12 +537,35 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            text-decoration: none;
         }
         .btn-outline:hover {
             border-color: var(--teal);
             color: var(--teal);
             transform: translateY(-4px);
             background: rgba(0, 180, 176, 0.05);
+        }
+
+        .btn-cta {
+            background: var(--orange);
+            color: #0b1215;
+            font-weight: 700;
+            padding: 14px 36px;
+            border-radius: 60px;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .btn-cta:hover {
+            background: #ff9a5e;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 36px var(--orange-glow);
+            color: #0b1215;
         }
 
         .hero-image {
@@ -833,7 +865,7 @@
 
         /* ===== WHY CHOOSE ===== */
         .why-choose {
-            padding: 70px 0;
+            padding: 70px 0 50px;
             background: rgba(20, 32, 38, 0.3);
             border-top: 1px solid rgba(255, 255, 255, 0.03);
             border-bottom: 1px solid rgba(255, 255, 255, 0.03);
@@ -878,9 +910,14 @@
             font-size: 0.95rem;
         }
 
+        .why-cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+
         /* ===== PROS & CONS ===== */
         .pros-cons {
-            padding: 70px 0;
+            padding: 70px 0 50px;
         }
 
         .pros-cons-grid {
@@ -928,6 +965,60 @@
 
         .pros-cons-box.cons ul li i {
             color: var(--orange);
+        }
+
+        .pros-cons-cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-section {
+            padding: 70px 0;
+            background: rgba(20, 32, 38, 0.4);
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            padding: 24px 28px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: all var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: var(--teal);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .faq-item h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--teal);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-item h4 i {
+            font-size: 1.2rem;
+        }
+
+        .faq-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         /* ===== FORM ===== */
@@ -1001,6 +1092,119 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
+        }
+
+        /* Стили для ползунков */
+        .range-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .range-group .range-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .range-group .range-header span:last-child {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .range-group input[type="range"] {
+            width: 100%;
+            height: 6px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: var(--bg-input);
+            border-radius: 10px;
+            outline: none;
+            transition: background 0.2s;
+            border: none;
+            padding: 0;
+        }
+
+        .range-group input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--teal);
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid var(--bg-deep);
+            box-shadow: 0 0 8px var(--teal-glow);
+        }
+
+        .range-group input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+            background: #00d0cc;
+        }
+
+        .range-group input[type="range"]::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--teal);
+            cursor: pointer;
+            border: 2px solid var(--bg-deep);
+        }
+
+        /* Цели с иконками */
+        .goal-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 4px;
+        }
+
+        .goal-item {
+            background: var(--bg-input);
+            border: 2px solid transparent;
+            border-radius: 14px;
+            padding: 16px 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-secondary);
+            user-select: none;
+        }
+
+        .goal-item:hover {
+            border-color: var(--teal);
+            background: rgba(0, 180, 176, 0.05);
+        }
+
+        .goal-item input[type="checkbox"] {
+            display: none;
+        }
+
+        .goal-item i {
+            font-size: 1.8rem;
+            color: var(--teal);
+            transition: color var(--transition);
+        }
+
+        .goal-item span {
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .goal-item.active {
+            border-color: var(--teal);
+            background: rgba(0, 180, 176, 0.1);
+            color: var(--text-primary);
+        }
+
+        .goal-item.active i {
+            color: var(--orange);
         }
 
         .checkbox-group {
@@ -1079,9 +1283,70 @@
             color: var(--orange);
         }
 
+        /* ===== FLOATING BUTTONS ===== */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: flex-end;
+        }
+
+        .floating-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #0b1215;
+            border: none;
+            box-shadow: 0 8px 24px rgba(0, 180, 176, 0.4);
+            cursor: pointer;
+            transition: all var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            text-decoration: none;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 32px rgba(0, 180, 176, 0.6);
+        }
+
+        .floating-btn.phone {
+            background: var(--orange);
+            box-shadow: 0 8px 24px rgba(247, 127, 63, 0.4);
+        }
+
+        .floating-btn.phone:hover {
+            box-shadow: 0 12px 32px rgba(247, 127, 63, 0.6);
+        }
+
+        .floating-btn.top {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .floating-btn.top:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .floating-btn.top.hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+        }
+
         /* ===== FOOTER ===== */
         .footer {
-            padding: 40px 0;
+            padding: 40px 0 30px;
             text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.04);
             background: var(--bg-deep);
@@ -1115,6 +1380,34 @@
             margin-top: 18px;
         }
 
+        .footer .creator {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .footer .creator a {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color var(--transition);
+        }
+
+        .footer .creator a:hover {
+            color: var(--orange);
+        }
+
+        .footer .creator .cta {
+            color: var(--orange);
+            font-weight: 600;
+        }
+
+        .footer .creator .cta:hover {
+            color: var(--teal);
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 992px) {
             .hero-grid {
@@ -1141,16 +1434,48 @@
             .pros-cons-grid {
                 grid-template-columns: 1fr;
             }
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+            .goal-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .floating-big .big-item {
+                font-size: 6rem !important;
+            }
+            .floating-big .big-item:nth-child(1) {
+                font-size: 10rem !important;
+            }
+            .floating-big .big-item:nth-child(2) {
+                font-size: 12rem !important;
+            }
+            .floating-big .big-item:nth-child(3) {
+                font-size: 8rem !important;
+            }
+            .floating-big .big-item:nth-child(4) {
+                font-size: 7rem !important;
+            }
         }
 
         @media (max-width: 640px) {
             .navbar .container {
-                flex-wrap: wrap;
-                gap: 10px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 8px;
+            }
+            .navbar .logo {
+                text-align: center;
+                font-size: 1rem;
+            }
+            .nav-actions {
                 justify-content: center;
             }
+            .nav-phone {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
             .hero {
-                padding: 120px 0 50px;
+                padding: 160px 0 50px;
             }
             .hero-content h1 {
                 font-size: 2.2rem;
@@ -1173,8 +1498,9 @@
                 grid-template-columns: 1fr 1fr;
             }
             .btn-primary,
-            .btn-outline {
-                padding: 14px 28px;
+            .btn-outline,
+            .btn-cta {
+                padding: 14px 24px;
                 font-size: 0.9rem;
             }
             .why-grid {
@@ -1187,6 +1513,34 @@
             .modal-content {
                 padding: 28px 20px;
             }
+            .goal-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .floating-buttons {
+                bottom: 20px;
+                right: 20px;
+                gap: 10px;
+            }
+            .floating-btn {
+                width: 48px;
+                height: 48px;
+                font-size: 1.2rem;
+            }
+            .floating-big .big-item {
+                font-size: 4rem !important;
+            }
+            .floating-big .big-item:nth-child(1) {
+                font-size: 7rem !important;
+            }
+            .floating-big .big-item:nth-child(2) {
+                font-size: 8rem !important;
+            }
+            .floating-big .big-item:nth-child(3) {
+                font-size: 6rem !important;
+            }
+            .floating-big .big-item:nth-child(4) {
+                font-size: 5rem !important;
+            }
         }
 
         @media (max-width: 420px) {
@@ -1194,6 +1548,9 @@
                 grid-template-columns: 1fr;
             }
             .about-stats {
+                grid-template-columns: 1fr;
+            }
+            .goal-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -1210,22 +1567,22 @@
     </div>
     <div class="bg-grid"></div>
 
-    <!-- ===== FLOATING ICONS ===== -->
-    <div class="floating-icons">
-        <div class="float-item"><i class="fas fa-dumbbell"></i></div>
-        <div class="float-item"><i class="fas fa-sun"></i></div>
-        <div class="float-item"><i class="fas fa-dumbbell"></i></div>
-        <div class="float-item"><i class="fas fa-sun"></i></div>
-        <div class="float-item"><i class="fas fa-dumbbell"></i></div>
-        <div class="float-item"><i class="fas fa-sun"></i></div>
-        <div class="float-item"><i class="fas fa-dumbbell"></i></div>
+    <!-- ===== BIG FLOATING SPORT ICONS ===== -->
+    <div class="floating-big">
+        <div class="big-item"><i class="fas fa-dumbbell"></i></div>
+        <div class="big-item"><i class="fas fa-dumbbell"></i></div>
+        <div class="big-item"><i class="fas fa-dumbbell"></i></div>
+        <div class="big-item"><i class="fas fa-dumbbell"></i></div>
     </div>
 
     <!-- ===== NAVBAR ===== -->
     <header class="navbar" id="navbar">
         <div class="container">
-            <a href="#" class="logo">Karen<span>Fit</span></a>
-            <a href="#form" class="nav-cta"><i class="fas fa-paper-plane"></i> Связаться</a>
+            <a href="#" class="logo">Тренер сети <span>DDX Fitness</span> · Армавир</a>
+            <div class="nav-actions">
+                <a href="tel:+79180931237" class="nav-phone"><i class="fas fa-phone-alt"></i> +7 918 093-12-37</a>
+                <a href="#form" class="nav-cta"><i class="fas fa-paper-plane"></i> Связаться</a>
+            </div>
         </div>
     </header>
 
@@ -1254,6 +1611,9 @@
                         </a>
                         <a href="#about" class="btn-outline">
                             <i class="fas fa-user"></i> О тренере
+                        </a>
+                        <a href="tel:+79180931237" class="btn-outline" style="border-color:var(--orange); color:var(--orange);">
+                            <i class="fas fa-phone-alt"></i> Позвонить
                         </a>
                     </div>
                 </div>
@@ -1478,6 +1838,9 @@
                     <p>Контроль техники, профилактика травм, работа с ограничениями и восстановлением.</p>
                 </div>
             </div>
+            <div class="why-cta">
+                <a href="#form" class="btn-cta"><i class="fas fa-calendar-check"></i> Записаться на консультацию</a>
+            </div>
         </div>
     </section>
 
@@ -1507,6 +1870,43 @@
                     </ul>
                 </div>
             </div>
+            <div class="pros-cons-cta">
+                <a href="#form" class="btn-cta"><i class="fas fa-calendar-check"></i> Записаться на консультацию</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section">
+        <div class="container">
+            <span class="section-tag"><i class="fas fa-question-circle"></i> Часто задаваемые вопросы</span>
+            <h2 class="section-title">Ответы на <span>важные вопросы</span></h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4><i class="fas fa-ruble-sign"></i> Сколько стоят тренировки?</h4>
+                    <p>Стоимость зависит от формата занятий (офлайн / онлайн) и длительности абонемента. Для точного расчёта свяжитесь со мной — подберём оптимальный вариант под ваш бюджет.</p>
+                </div>
+                <div class="faq-item">
+                    <h4><i class="fas fa-check-circle"></i> А результат точно будет?</h4>
+                    <p>Всё зависит от вашего упорства и желания. Я же со своей стороны сделаю всё, чтобы помочь вам достичь результата: подберу программу, буду контролировать технику, корректировать план и поддерживать на каждом этапе. Вместе мы справимся!</p>
+                </div>
+                <div class="faq-item">
+                    <h4><i class="fas fa-heartbeat"></i> Можно ли заниматься с травмой?</h4>
+                    <p>Да, но только после консультации с врачом. Я адаптирую программу под ваши ограничения, чтобы тренировки были безопасными и способствовали восстановлению.</p>
+                </div>
+                <div class="faq-item">
+                    <h4><i class="fas fa-clock"></i> Как часто нужно тренироваться?</h4>
+                    <p>Оптимальная частота — 2–3 раза в неделю для начинающих, 3–5 раз для продвинутых. Всё зависит от ваших целей и свободного времени — составим график вместе.</p>
+                </div>
+                <div class="faq-item">
+                    <h4><i class="fas fa-wifi"></i> Что нужно для онлайн-тренировки?</h4>
+                    <p>Достаточно смартфона или ноутбука с камерой и доступом в интернет. Провожу занятия через видео-звонок, даю обратную связь по технике.</p>
+                </div>
+                <div class="faq-item">
+                    <h4><i class="fas fa-utensils"></i> Нужно ли соблюдать диету?</h4>
+                    <p>Я рекомендую сбалансированное питание, но не требую строгих диет. Вместе составим план, который впишется в ваш образ жизни и поможет достичь цели.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1532,20 +1932,56 @@
                         </div>
                     </div>
 
+                    <!-- Рост и Вес ползунками -->
                     <div class="form-row">
-                        <div class="form-group">
-                            <label for="age">Возраст <span class="required">*</span></label>
-                            <input type="number" id="age" placeholder="Ваш возраст" required />
+                        <div class="form-group range-group">
+                            <label for="heightSlider">Рост, см</label>
+                            <div class="range-header">
+                                <span>140</span>
+                                <span id="heightValue">175</span>
+                                <span>220</span>
+                            </div>
+                            <input type="range" id="heightSlider" min="140" max="220" value="175" step="1" />
+                            <input type="hidden" id="height" value="175" />
                         </div>
-                        <div class="form-group">
-                            <label for="weight">Рост / Вес</label>
-                            <input type="text" id="weight" placeholder="Напр.: 175 см / 70 кг" />
+                        <div class="form-group range-group">
+                            <label for="weightSlider">Вес, кг</label>
+                            <div class="range-header">
+                                <span>40</span>
+                                <span id="weightValue">70</span>
+                                <span>180</span>
+                            </div>
+                            <input type="range" id="weightSlider" min="40" max="180" value="70" step="1" />
+                            <input type="hidden" id="weight" value="70" />
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="restrictions">Ограничения по спорту (травмы, заболевания)</label>
                         <input type="text" id="restrictions" placeholder="Если есть, укажите" />
+                    </div>
+
+                    <!-- Выбор целей с иконками -->
+                    <div class="form-group">
+                        <label>Выберите вашу основную цель <span class="required">*</span></label>
+                        <div class="goal-grid" id="goalGrid">
+                            <label class="goal-item" data-value="похудеть">
+                                <input type="checkbox" name="goal" value="похудеть" />
+                                <i class="fas fa-weight-scale"></i>
+                                <span>Похудеть</span>
+                            </label>
+                            <label class="goal-item" data-value="накачать мышцы">
+                                <input type="checkbox" name="goal" value="накачать мышцы" />
+                                <i class="fas fa-dumbbell"></i>
+                                <span>Накачать мышцы</span>
+                            </label>
+                            <label class="goal-item" data-value="улучшить здоровье">
+                                <input type="checkbox" name="goal" value="улучшить здоровье" />
+                                <i class="fas fa-heart"></i>
+                                <span>Улучшить здоровье</span>
+                            </label>
+                        </div>
+                        <div id="goalError" style="color:var(--orange); font-size:0.9rem; margin-top:4px; display:none;">Выберите хотя бы одну цель</div>
                     </div>
 
                     <div class="form-group">
@@ -1558,8 +1994,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="goal">Ваша цель <span class="required">*</span></label>
-                        <input type="text" id="goal" placeholder="Напр.: похудеть, подтянуть мышцы, улучшить выносливость" required />
+                        <label for="goal_text">Ваша цель (подробно) <span class="required">*</span></label>
+                        <input type="text" id="goal_text" placeholder="Напр.: похудеть, подтянуть мышцы, улучшить выносливость" required />
                     </div>
 
                     <div class="form-group">
@@ -1587,8 +2023,24 @@
                 <i class="fab fa-telegram"></i> @mr_fitness
             </a>
             <div class="copy">© 2026 Карен Карапетян · Тренер сети клубов DDX Fitness · Армавир</div>
+
+            <div class="creator">
+                <span>Создатель сайта: <a href="https://t.me/kazus_studio" target="_blank">@kazus_studio</a></span>
+                <span style="margin: 0 8px;">|</span>
+                <span>Хочешь так же? <a href="https://t.me/kazus_studio" target="_blank" class="cta">Напиши мне</a></span>
+            </div>
         </div>
     </footer>
+
+    <!-- ===== FLOATING BUTTONS ===== -->
+    <div class="floating-buttons">
+        <a href="tel:+79180931237" class="floating-btn phone" aria-label="Позвонить">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <button class="floating-btn top hidden" id="scrollTopBtn" aria-label="Наверх">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
 
     <!-- ===== SCRIPTS ===== -->
     <script>
@@ -1640,6 +2092,110 @@
                 }
             });
 
+            // ===== МАСКА ДЛЯ ТЕЛЕФОНА =====
+            const phoneInput = document.getElementById('phone');
+            if (phoneInput) {
+                phoneInput.addEventListener('input', function(e) {
+                    let value = this.value.replace(/\D/g, '');
+                    if (value.length === 0) {
+                        this.value = '+7 (';
+                        return;
+                    }
+                    let formatted = '+7 (';
+                    if (value.length > 1) {
+                        formatted += value.substring(1, 4);
+                    } else {
+                        formatted += value.substring(1);
+                    }
+                    if (value.length >= 4) {
+                        formatted += ') ';
+                    }
+                    if (value.length >= 4) {
+                        formatted += value.substring(4, 7);
+                    }
+                    if (value.length >= 7) {
+                        formatted += '-';
+                    }
+                    if (value.length >= 7) {
+                        formatted += value.substring(7, 9);
+                    }
+                    if (value.length >= 9) {
+                        formatted += '-';
+                    }
+                    if (value.length >= 9) {
+                        formatted += value.substring(9, 11);
+                    }
+                    this.value = formatted;
+                });
+
+                if (!phoneInput.value) {
+                    phoneInput.value = '+7 (';
+                }
+
+                phoneInput.addEventListener('focus', function() {
+                    const len = this.value.length;
+                    this.setSelectionRange(len, len);
+                });
+            }
+
+            // ===== ПОЛЗУНКИ ДЛЯ РОСТА И ВЕСА =====
+            const heightSlider = document.getElementById('heightSlider');
+            const heightValue = document.getElementById('heightValue');
+            const heightHidden = document.getElementById('height');
+
+            const weightSlider = document.getElementById('weightSlider');
+            const weightValue = document.getElementById('weightValue');
+            const weightHidden = document.getElementById('weight');
+
+            if (heightSlider) {
+                heightSlider.addEventListener('input', function() {
+                    const val = this.value;
+                    heightValue.textContent = val;
+                    heightHidden.value = val;
+                });
+            }
+
+            if (weightSlider) {
+                weightSlider.addEventListener('input', function() {
+                    const val = this.value;
+                    weightValue.textContent = val;
+                    weightHidden.value = val;
+                });
+            }
+
+            // ===== ВЫБОР ЦЕЛЕЙ =====
+            const goalItems = document.querySelectorAll('.goal-item');
+            const goalError = document.getElementById('goalError');
+
+            goalItems.forEach(item => {
+                const checkbox = item.querySelector('input[type="checkbox"]');
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+                if (checkbox.checked) {
+                    item.classList.add('active');
+                }
+            });
+
+            // ===== ПЛАВАЮЩАЯ КНОПКА "НАВЕРХ" =====
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    scrollTopBtn.classList.remove('hidden');
+                } else {
+                    scrollTopBtn.classList.add('hidden');
+                }
+            });
+
+            scrollTopBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
             // ===== ФОРМА =====
             const form = document.getElementById('trainerForm');
             const statusEl = document.getElementById('formStatus');
@@ -1651,11 +2207,18 @@
                 formatCheckboxes.forEach(cb => formats.push(cb.value));
                 const formatText = formats.length ? formats.join(', ') : 'не выбрано';
 
+                const goalCheckboxes = document.querySelectorAll('input[name="goal"]:checked');
+                let goals = [];
+                goalCheckboxes.forEach(cb => goals.push(cb.value));
+                const goalText = goals.length ? goals.join(', ') : 'не указано';
+
                 const message =
                     `Добрый день! Я с вашей странички. Меня зовут ${encodeURIComponent(data.name)}. Мне ${encodeURIComponent(data.age)} лет. ` +
-                    `Я хочу ${encodeURIComponent(formatText)}. Мне удобно, чтобы со мной связались ${encodeURIComponent(data.time)}. ` +
-                    `Мои данные: телефон ${encodeURIComponent(data.phone)}, рост/вес ${encodeURIComponent(data.weight || 'не указано')}, ` +
-                    `ограничения: ${encodeURIComponent(data.restrictions || 'нет')}. Моя цель: ${encodeURIComponent(data.goal)}.`;
+                    `Мой рост: ${encodeURIComponent(data.height)} см, вес: ${encodeURIComponent(data.weight)} кг. ` +
+                    `Моя цель: ${encodeURIComponent(goalText)}. Хочу ${encodeURIComponent(formatText)}. ` +
+                    `Мне удобно, чтобы со мной связались ${encodeURIComponent(data.time)}. Мои данные: телефон ${encodeURIComponent(data.phone)}, ` +
+                    `ограничения: ${encodeURIComponent(data.restrictions || 'нет')}. ` +
+                    `Подробно о цели: ${encodeURIComponent(data.goal_text)}.`;
 
                 return `https://t.me/mr_fitness?text=${message}`;
             }
@@ -1671,12 +2234,13 @@
                 const name = document.getElementById('name').value.trim();
                 const phone = document.getElementById('phone').value.trim();
                 const age = document.getElementById('age').value.trim();
-                const weight = document.getElementById('weight').value.trim();
+                const height = document.getElementById('height').value;
+                const weight = document.getElementById('weight').value;
                 const restrictions = document.getElementById('restrictions').value.trim();
-                const goal = document.getElementById('goal').value.trim();
+                const goal_text = document.getElementById('goal_text').value.trim();
                 const time = document.getElementById('time').value.trim();
 
-                if (!name || !phone || !age || !goal || !time) {
+                if (!name || !phone || !age || !goal_text || !time) {
                     statusEl.textContent = '❌ Пожалуйста, заполните все обязательные поля.';
                     statusEl.className = 'form-status error';
                     statusEl.style.display = 'block';
@@ -1685,9 +2249,22 @@
                     return;
                 }
 
-                const checked = document.querySelectorAll('input[name="format"]:checked');
-                if (checked.length === 0) {
-                    statusEl.textContent = '❌ Выберите хотя бы один интересующий вас формат (офлайн, онлайн, план питания).';
+                const goalChecked = document.querySelectorAll('input[name="goal"]:checked');
+                if (goalChecked.length === 0) {
+                    goalError.style.display = 'block';
+                    statusEl.textContent = '❌ Выберите хотя бы одну цель.';
+                    statusEl.className = 'form-status error';
+                    statusEl.style.display = 'block';
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fab fa-telegram-plane"></i> Отправить в Telegram';
+                    return;
+                } else {
+                    goalError.style.display = 'none';
+                }
+
+                const formatChecked = document.querySelectorAll('input[name="format"]:checked');
+                if (formatChecked.length === 0) {
+                    statusEl.textContent = '❌ Выберите хотя бы один интересующий вас формат.';
                     statusEl.className = 'form-status error';
                     statusEl.style.display = 'block';
                     submitBtn.disabled = false;
@@ -1695,7 +2272,7 @@
                     return;
                 }
 
-                const formData = { name, phone, age, weight, restrictions, goal, time };
+                const formData = { name, phone, age, height, weight, restrictions, goal_text, time };
                 const telegramUrl = buildTelegramLink(formData);
 
                 window.open(telegramUrl, '_blank');
@@ -1705,6 +2282,21 @@
                 statusEl.style.display = 'block';
 
                 form.reset();
+                document.querySelectorAll('.goal-item').forEach(el => el.classList.remove('active'));
+                document.querySelectorAll('input[name="goal"]').forEach(cb => cb.checked = false);
+                if (phoneInput) phoneInput.value = '+7 (';
+
+                // Сброс ползунков на значения по умолчанию
+                if (heightSlider) {
+                    heightSlider.value = 175;
+                    heightValue.textContent = '175';
+                    heightHidden.value = '175';
+                }
+                if (weightSlider) {
+                    weightSlider.value = 70;
+                    weightValue.textContent = '70';
+                    weightHidden.value = '70';
+                }
 
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = '<i class="fab fa-telegram-plane"></i> Отправить в Telegram';
