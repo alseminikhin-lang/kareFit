@@ -111,6 +111,7 @@
             line-height: 1.6;
             overflow-x: hidden;
             position: relative;
+            min-height: 100vh;
         }
 
         /* ===== ANIMATED BACKGROUND (ОРБЫ) ===== */
@@ -249,6 +250,20 @@
             font-size: 12rem;
             animation-duration: 26s, 20s;
             animation-delay: -4s, -10s;
+        }
+        .floating-big .big-item:nth-child(5) {
+            top: 25%;
+            right: 8%;
+            font-size: 11rem;
+            animation-duration: 34s, 28s;
+            animation-delay: -8s, -6s;
+        }
+        .floating-big .big-item:nth-child(6) {
+            bottom: 30%;
+            left: 30%;
+            font-size: 13rem;
+            animation-duration: 28s, 22s;
+            animation-delay: -14s, -9s;
         }
 
         @keyframes bigFloat {
@@ -428,7 +443,6 @@
             align-items: center;
         }
 
-        /* Убираем бейдж из hero */
         .hero-content .badge {
             display: none;
         }
@@ -1432,6 +1446,12 @@
             .floating-big .big-item:nth-child(4) {
                 font-size: 7rem !important;
             }
+            .floating-big .big-item:nth-child(5) {
+                font-size: 6rem !important;
+            }
+            .floating-big .big-item:nth-child(6) {
+                font-size: 7rem !important;
+            }
         }
 
         @media (max-width: 640px) {
@@ -1479,6 +1499,11 @@
             .btn-cta {
                 padding: 14px 24px;
                 font-size: 0.9rem;
+                width: 100%;
+                justify-content: center;
+            }
+            .hero-buttons .btn-outline {
+                width: 100%;
             }
             .why-grid {
                 grid-template-columns: 1fr;
@@ -1518,6 +1543,34 @@
             .floating-big .big-item:nth-child(4) {
                 font-size: 5rem !important;
             }
+            .floating-big .big-item:nth-child(5) {
+                font-size: 4.5rem !important;
+            }
+            .floating-big .big-item:nth-child(6) {
+                font-size: 5rem !important;
+            }
+            .container {
+                padding: 0 16px;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .footer .creator {
+                font-size: 0.75rem;
+            }
+            .footer .creator span {
+                display: block;
+                margin: 4px 0;
+            }
+            .footer .creator span:not(:last-child) {
+                margin-bottom: 4px;
+            }
+            .footer .creator span[style] {
+                display: none !important;
+            }
+            .footer .creator a {
+                display: inline-block;
+            }
         }
 
         @media (max-width: 420px) {
@@ -1529,6 +1582,12 @@
             }
             .goal-grid {
                 grid-template-columns: 1fr;
+            }
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            .hero-content .title-role {
+                font-size: 1rem;
             }
         }
     </style>
@@ -1547,9 +1606,11 @@
     <!-- ===== BIG FLOATING SPORT ICONS ===== -->
     <div class="floating-big">
         <div class="big-item"><i class="fas fa-dumbbell"></i></div>
-        <div class="big-item"><i class="fas fa-dumbbell"></i></div>
-        <div class="big-item"><i class="fas fa-dumbbell"></i></div>
-        <div class="big-item"><i class="fas fa-dumbbell"></i></div>
+        <div class="big-item"><i class="fas fa-running"></i></div>
+        <div class="big-item"><i class="fas fa-bicycle"></i></div>
+        <div class="big-item"><i class="fas fa-heartbeat"></i></div>
+        <div class="big-item"><i class="fas fa-bolt"></i></div>
+        <div class="big-item"><i class="fas fa-fire"></i></div>
     </div>
 
     <!-- ===== NAVBAR ===== -->
@@ -1568,7 +1629,6 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <!-- Бейдж удалён, надпись только в шапке -->
                     <h1>
                         Карен <br />
                         <span class="highlight">Карапетян</span>
@@ -1998,10 +2058,11 @@
             </a>
             <div class="copy">© 2026 Карен Карапетян · Тренер сети клубов DDX Fitness · Армавир</div>
 
+            <!-- Обновлённые ссылки с новым текстом сообщения -->
             <div class="creator">
-                <span>Создатель сайта: <a href="https://t.me/kazus_studio?text=%D1%8F%20%D1%83%D0%B2%D0%B8%D0%B4%D0%B5%D0%BB(%D0%B0)%20%D0%BA%D0%B0%D0%BA%D1%83%D1%8E%20%D0%B2%D1%8B%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D0%BB%D0%B8%20%D0%B2%D0%B8%D0%B7%D0%B8%D1%82%D0%BA%D1%83%20%D0%B8%20%D1%82%D0%BE%D0%B6%D0%B5%20%D1%85%D0%BE%D1%87%D1%83%20%D1%82%D0%B0%D0%BA%D1%83%D1%8E%20%D1%85%D0%BE%D1%82%D0%B5%D0%BB%D0%BE%D1%81%D1%8C%20%D0%B1%D1%8B%20%D1%83%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D1%82%D1%8C%20%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8" target="_blank">@kazus_studio</a></span>
+                <span>Создатель сайта: <a href="https://t.me/kazus_studio?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%21%20%D0%A3%D0%B2%D0%B8%D0%B4%D0%B5%D0%BB%20%D0%B2%D0%B8%D0%B7%D0%B8%D1%82%D0%BA%D1%83%20%D1%83%20%D0%9A%D0%B0%D1%80%D0%B5%D0%BD%D0%B0%20%D0%B8%D0%B7%20DDXFitness%20%D0%B8%20%D1%85%D0%BE%D1%82%D0%B5%D0%BB%28%D0%B0%29%20%D0%B1%D1%8B%20%D1%83%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D1%82%D1%8C%20%D0%BF%D0%B0%D1%80%D1%83%20%D0%BC%D0%BE%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2%3A%20" target="_blank">@kazus_studio</a></span>
                 <span style="margin: 0 8px;">|</span>
-                <span>Хочешь так же? <a href="https://t.me/kazus_studio?text=%D1%8F%20%D1%83%D0%B2%D0%B8%D0%B4%D0%B5%D0%BB(%D0%B0)%20%D0%BA%D0%B0%D0%BA%D1%83%D1%8E%20%D0%B2%D1%8B%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D0%BB%D0%B8%20%D0%B2%D0%B8%D0%B7%D0%B8%D1%82%D0%BA%D1%83%20%D0%B8%20%D1%82%D0%BE%D0%B6%D0%B5%20%D1%85%D0%BE%D1%87%D1%83%20%D1%82%D0%B0%D0%BA%D1%83%D1%8E%20%D1%85%D0%BE%D1%82%D0%B5%D0%BB%D0%BE%D1%81%D1%8C%20%D0%B1%D1%8B%20%D1%83%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D1%82%D1%8C%20%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8" target="_blank" class="cta">Напиши мне</a></span>
+                <span>Хочешь так же? <a href="https://t.me/kazus_studio?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%21%20%D0%A3%D0%B2%D0%B8%D0%B4%D0%B5%D0%BB%20%D0%B2%D0%B8%D0%B7%D0%B8%D1%82%D0%BA%D1%83%20%D1%83%20%D0%9A%D0%B0%D1%80%D0%B5%D0%BD%D0%B0%20%D0%B8%D0%B7%20DDXFitness%20%D0%B8%20%D1%85%D0%BE%D1%82%D0%B5%D0%BB%28%D0%B0%29%20%D0%B1%D1%8B%20%D1%83%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D1%82%D1%8C%20%D0%BF%D0%B0%D1%80%D1%83%20%D0%BC%D0%BE%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2%3A%20" target="_blank" class="cta">Напиши мне</a></span>
             </div>
         </div>
     </footer>
@@ -2170,7 +2231,7 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // ===== ФОРМА =====
+            // ===== ФОРМА — ИСПРАВЛЕННАЯ ОТПРАВКА =====
             const form = document.getElementById('trainerForm');
             const statusEl = document.getElementById('formStatus');
             const submitBtn = document.getElementById('submitBtn');
@@ -2200,11 +2261,13 @@
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
 
+                // Сброс предыдущих сообщений
                 statusEl.className = 'form-status';
                 statusEl.style.display = 'none';
                 submitBtn.disabled = true;
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Подготовка...';
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Отправка...';
 
+                // Сбор данных
                 const name = document.getElementById('name').value.trim();
                 const phone = document.getElementById('phone').value.trim();
                 const age = document.getElementById('age').value.trim();
@@ -2214,6 +2277,7 @@
                 const goal_text = document.getElementById('goal_text').value.trim();
                 const time = document.getElementById('time').value.trim();
 
+                // Валидация
                 if (!name || !phone || !age || !goal_text || !time) {
                     statusEl.textContent = '❌ Пожалуйста, заполните все обязательные поля.';
                     statusEl.className = 'form-status error';
@@ -2246,34 +2310,49 @@
                     return;
                 }
 
+                // Формируем ссылку
                 const formData = { name, phone, age, height, weight, restrictions, goal_text, time };
                 const telegramUrl = buildTelegramLink(formData);
 
-                window.open(telegramUrl, '_blank');
+                // Вывод в консоль для отладки
+                console.log('Отправка в Telegram Карена:', telegramUrl);
 
-                statusEl.textContent = '✅ Сообщение сформировано! Откроется Telegram с готовым текстом.';
+                // Пытаемся открыть в новом окне (если браузер не блокирует)
+                const win = window.open(telegramUrl, '_blank');
+
+                // Если окно заблокировано или закрыто, переходим в текущем окне
+                if (!win || win.closed || typeof win.closed === 'undefined') {
+                    window.location.href = telegramUrl;
+                }
+
+                // Показываем статус
+                statusEl.textContent = '✅ Сообщение сформировано! Переход в Telegram...';
                 statusEl.className = 'form-status success';
                 statusEl.style.display = 'block';
 
-                form.reset();
-                document.querySelectorAll('.goal-item').forEach(el => el.classList.remove('active'));
-                document.querySelectorAll('input[name="goal"]').forEach(cb => cb.checked = false);
-                if (phoneInput) phoneInput.value = '+7 (';
-
-                // Сброс ползунков на значения по умолчанию
-                if (heightSlider) {
-                    heightSlider.value = 175;
-                    heightValue.textContent = '175';
-                    heightHidden.value = '175';
-                }
-                if (weightSlider) {
-                    weightSlider.value = 70;
-                    weightValue.textContent = '70';
-                    weightHidden.value = '70';
-                }
-
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<i class="fab fa-telegram-plane"></i> Отправить в Telegram';
+                // Сбрасываем форму через 1.5 секунды (чтобы пользователь увидел статус)
+                setTimeout(() => {
+                    form.reset();
+                    document.querySelectorAll('.goal-item').forEach(el => el.classList.remove('active'));
+                    document.querySelectorAll('input[name="goal"]').forEach(cb => cb.checked = false);
+                    if (phoneInput) phoneInput.value = '+7 (';
+                    if (heightSlider) {
+                        heightSlider.value = 175;
+                        heightValue.textContent = '175';
+                        heightHidden.value = '175';
+                    }
+                    if (weightSlider) {
+                        weightSlider.value = 70;
+                        weightValue.textContent = '70';
+                        weightHidden.value = '70';
+                    }
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fab fa-telegram-plane"></i> Отправить в Telegram';
+                    // Скрываем статус через 3 секунды
+                    setTimeout(() => {
+                        statusEl.style.display = 'none';
+                    }, 3000);
+                }, 1500);
             });
 
         })();
