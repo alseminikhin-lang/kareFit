@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Карен Карапетян — персональный тренер в Армавире. Тренировки, питание и онлайн-ведение.">
+<meta name="theme-color" content="#061014">
+<title>Карен Карапетян — персональный тренер</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{--bg:#061014;--text:#eff9fc;--muted:#a8c6d1;--teal:#00cdbf;--teal-light:#65f5e4;--orange:#ff8751;--orange-light:#ffb184;--border:rgba(203,239,246,.14);--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-width:320px;overflow-x:hidden;background:var(--bg);color:var(--text);font:16px/1.6 Inter,Arial,sans-serif}
+body.modal-open{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+.container{width:min(1180px,calc(100% - 40px));margin:auto;position:relative;z-index:2}
+.noise{position:fixed;inset:0;z-index:-5;pointer-events:none;opacity:.1;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}
+.grid{position:fixed;inset:0;z-index:-4;pointer-events:none;opacity:.3;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:58px 58px;mask-image:linear-gradient(to bottom,#000,transparent 90%)}
+.aurora{position:fixed;inset:0;z-index:-3;overflow:hidden;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(100px);opacity:.28}
+.orb.a{width:680px;height:680px;background:#00cdbf;top:-270px;left:-230px;animation:auroraA 18s ease-in-out infinite alternate}
+.orb.b{width:620px;height:620px;background:#ff8751;right:-260px;bottom:-280px;animation:auroraB 22s ease-in-out infinite alternate}
+.orb.c{width:430px;height:430px;background:#187c88;top:38%;left:37%;opacity:.17;animation:auroraC 25s ease-in-out infinite alternate}
+@keyframes auroraA{to{transform:translate(170px,110px) scale(1.22)}}
+@keyframes auroraB{to{transform:translate(-150px,-90px) scale(.78)}}
+@keyframes auroraC{to{transform:translate(120px,-100px) scale(1.3)}}
+.float-icons{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
+.float-icons i{position:absolute;color:rgba(101,245,228,.15);text-shadow:0 0 28px rgba(0,205,191,.17);animation:drift 23s var(--ease) infinite alternate}
+.float-icons i:nth-child(1){top:16%;left:4%;font-size:8.8rem;animation-delay:-4s}
+.float-icons i:nth-child(2){top:22%;right:5%;font-size:6.4rem;color:rgba(255,177,132,.14);animation-delay:-9s;animation-duration:28s}
+.float-icons i:nth-child(3){bottom:15%;left:7%;font-size:6.7rem;color:rgba(255,177,132,.13);animation-delay:-14s;animation-duration:26s}
+.float-icons i:nth-child(4){bottom:13%;right:7%;font-size:9.2rem;animation-delay:-5s;animation-duration:25s}
+.float-icons i:nth-child(5){top:59%;left:47%;font-size:5.2rem;animation-delay:-12s;animation-duration:30s}
+.float-icons i:nth-child(6){top:75%;right:30%;font-size:4.8rem;color:rgba(255,177,132,.11);animation-delay:-7s;animation-duration:21s}
+@keyframes drift{0%{transform:translate3d(0,0,0) rotate(-10deg) scale(.92);opacity:.35}45%{transform:translate3d(78px,-90px,0) rotate(11deg) scale(1.12);opacity:.72}100%{transform:translate3d(-40px,48px,0) rotate(-3deg) scale(1);opacity:.44}}
+.header{position:sticky;top:0;z-index:20;border-bottom:1px solid transparent;background:rgba(6,16,20,.72);backdrop-filter:blur(16px)}
+.header.scrolled{border-color:rgba(255,255,255,.08)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.logo{font-weight:900;letter-spacing:-.04em}
+.logo span,.teal{color:var(--teal-light)}
+.nav-actions{display:flex;align-items:center;gap:9px}
+.phone{padding:8px 13px;border-radius:999px;color:var(--teal-light);border:1px solid rgba(0,205,191,.25);font-size:.84rem;font-weight:800}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:47px;padding:12px 20px;border:0;border-radius:999px;cursor:pointer;font-weight:900;transition:.25s var(--ease)}
+.btn:hover{transform:translateY(-3px)}
+.orange{color:#180d08;background:linear-gradient(135deg,var(--orange-light),var(--orange));box-shadow:0 12px 28px rgba(255,135,81,.25)}
+.teal-btn{color:#051013;background:linear-gradient(135deg,var(--teal-light),var(--teal));box-shadow:0 12px 28px rgba(0,205,191,.23)}
+.outline{color:var(--text);border:1px solid var(--border);background:rgba(255,255,255,.03)}
+section{position:relative;padding:82px 0}
+.hero{min-height:730px;display:grid;align-items:center;padding:66px 0}
+.hero-grid,.about-grid,.session{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.eyebrow,.tag{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid rgba(0,205,191,.27);border-radius:999px;color:var(--teal-light);background:rgba(0,205,191,.08);font-size:.71rem;font-weight:900;letter-spacing:1px;text-transform:uppercase}
+.hero h1{margin:15px 0 0;font-size:clamp(3.4rem,7vw,5.8rem);line-height:.92;letter-spacing:-.085em}
+.hero p,.sub{color:var(--muted)}
+.badges,.hero-buttons,.checks{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.badge{padding:8px 11px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.04);font-size:.82rem}
+.badge i{color:var(--orange-light)}
+.photo{position:relative;max-width:480px;margin-left:auto}
+.photo-slider{position:relative;aspect-ratio:4/5;border-radius:31px;overflow:hidden;background:linear-gradient(135deg,var(--teal-light),var(--orange));box-shadow:0 28px 70px rgba(0,0,0,.45);animation:photoFloat 5.5s ease-in-out infinite}
+.photo-slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease}
+.photo-slide.active{opacity:1}
+.photo-slide img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.slider-nav{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:5}
+.slider-dot{width:9px;height:9px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:transparent;cursor:pointer;transition:.25s var(--ease)}
+.slider-dot.active{background:var(--text);border-color:var(--text)}
+.slider-btn{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:0;cursor:pointer;color:var(--text);background:rgba(0,0,0,.45);backdrop-filter:blur(6px);font-size:1.1rem;display:grid;place-items:center;transition:.25s var(--ease);z-index:5}
+.slider-btn:hover{background:rgba(0,0,0,.65)}
+.slider-btn.prev{left:12px}
+.slider-btn.next{right:12px}
+@keyframes photoFloat{50%{transform:translateY(-9px)}}
+.floating-card{position:absolute;right:-22px;bottom:32px;padding:13px 15px;border:1px solid rgba(255,255,255,.15);border-radius:16px;background:rgba(9,28,34,.84);backdrop-filter:blur(10px);font-size:.78rem;animation:cardFloat 4s ease-in-out infinite}
+.floating-card i{color:var(--teal-light)}
+@keyframes cardFloat{50%{transform:translateY(-11px)}}
+.soft{border-block:1px solid rgba(255,255,255,.06);background:rgba(18,45,55,.35)}
+.title{margin:14px 0 0;max-width:800px;font-size:clamp(2.1rem,5vw,3.55rem);line-height:1.05;letter-spacing:-.065em}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
+.card{padding:24px;border:1px solid var(--border);border-radius:21px;background:linear-gradient(145deg,rgba(19,44,54,.9),rgba(9,27,34,.8));box-shadow:0 18px 45px rgba(0,0,0,.2)}
+.feature{width:100%;min-height:172px;border:1px solid var(--border);cursor:pointer;text-align:center;color:var(--text);font:inherit;transition:.25s var(--ease)}
+.feature:hover,.feature:focus-visible{transform:translateY(-7px);border-color:rgba(101,245,228,.65);outline:none}
+.feature i{font-size:1.55rem;color:var(--teal-light);transition:.3s var(--ease)}
+.feature:hover i{color:var(--orange-light);transform:rotate(-10deg) scale(1.14)}
+.feature h3{margin:12px 0 0;font-size:.92rem}
+.feature small{display:block;margin-top:7px;color:var(--muted);font-size:.7rem}
+.about-grid{margin-top:30px}
+.about-copy{display:grid;gap:17px}
+.about-copy p{margin:0;color:var(--muted);font-size:1rem}
+.achievement{display:grid;gap:12px;margin:0;padding:0;list-style:none;color:var(--muted)}
+.achievement i{color:var(--teal-light)}
+.achievement strong{color:var(--text)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.stat{transition:.25s var(--ease)}
+.stat:hover{transform:translateY(-6px);border-color:rgba(101,245,228,.52)}
+.stat b{display:block;color:var(--teal-light);font-size:2.1rem}
+.stat span{color:var(--muted);font-size:.85rem}
+.calorie-section{padding:0 0 82px}
+.calorie-card{display:grid;grid-template-columns:1fr auto;align-items:center;gap:24px;padding:26px 30px;overflow:hidden;border:1px solid rgba(255,177,132,.32);border-radius:24px;background:linear-gradient(100deg,rgba(255,135,81,.13),rgba(10,30,37,.78) 42%,rgba(0,205,191,.11));box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.calorie-info{display:flex;align-items:center;gap:16px}
+.calorie-icon{width:55px;height:55px;display:grid;place-items:center;flex:0 0 55px;border-radius:17px;color:var(--orange-light);background:rgba(255,135,81,.16);font-size:1.6rem;animation:firePulse 1.8s ease-in-out infinite}
+@keyframes firePulse{50%{transform:scale(1.12);filter:drop-shadow(0 0 9px rgba(255,135,81,.55))}}
+.calorie-info h3{margin:0;font-size:1rem}
+.calorie-info p{margin:3px 0 0;color:var(--muted);font-size:.85rem}
+.calorie-count{text-align:right}
+.calorie-count b{display:block;color:var(--orange-light);font-size:clamp(2.3rem,5vw,3.6rem);line-height:1;letter-spacing:-.07em}
+.calorie-count span{color:var(--muted);font-size:.8rem;font-weight:700}
+.session-wrap{padding:0;border:1px solid rgba(101,245,228,.35);border-radius:29px;overflow:hidden;background:linear-gradient(120deg,rgba(0,205,191,.18),rgba(15,39,48,.95),rgba(255,135,81,.17))}
+.session{padding:43px}
+.session h2{font-size:clamp(2.3rem,5vw,3.9rem);line-height:.98;letter-spacing:-.07em}
+.session-list{padding:0;list-style:none;color:#d9edf1}
+.session-list li{margin-top:9px}
+.session-list i{color:var(--teal-light)}
+.stamp{width:220px;height:220px;display:grid;place-items:center;margin:auto;border-radius:50%;color:#071014;text-align:center;background:linear-gradient(135deg,var(--orange-light),var(--orange));transform:rotate(10deg);box-shadow:0 22px 48px rgba(0,0,0,.3);animation:stampFloat 4.2s ease-in-out infinite}
+.stamp b{display:block;font-size:3.4rem;line-height:1}
+@keyframes stampFloat{50%{transform:rotate(4deg) translateY(-12px) scale(1.04)}}
+.values,.faq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:33px}
+.value{transition:.25s var(--ease)}
+.value:hover{transform:translateY(-7px);border-color:rgba(255,177,132,.55)}
+.value i,.faq i{color:var(--orange-light);font-size:1.35rem}
+.value p,.faq p{color:var(--muted);font-size:.9rem}
+.form-shell{max-width:830px;margin:auto}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.group{margin-top:17px}
+.group label{display:block;margin-bottom:7px;color:var(--muted);font-size:.88rem;font-weight:700}
+.required{color:var(--orange-light)}
+input[type=text],input[type=tel],input[type=number],textarea{width:100%;padding:13px 14px;outline:0;color:var(--text);border:1px solid var(--border);border-radius:13px;background:rgba(4,20,26,.72)}
+input:focus,textarea:focus{border-color:var(--teal-light);box-shadow:0 0 0 4px rgba(0,205,191,.12)}
+textarea{min-height:92px;resize:vertical}
+.range-head{display:flex;justify-content:space-between;color:var(--muted);font-size:.8rem}
+.range-head b{color:var(--text)}
+input[type=range]{width:100%;accent-color:var(--teal)}
+.goal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.goal input{position:absolute;opacity:0}
+.goal span{display:flex;align-items:center;justify-content:center;gap:8px;min-height:76px;padding:10px;border:1px solid var(--border);border-radius:13px;color:var(--muted);background:rgba(4,20,26,.72);cursor:pointer;text-align:center;font-size:.8rem;font-weight:800}
+.goal input:checked+span{border-color:var(--teal-light);color:var(--text);background:rgba(0,205,191,.13)}
+.check{padding:8px 11px;border:1px solid var(--border);border-radius:11px;color:var(--muted);font-size:.84rem}
+.check input{accent-color:var(--teal)}
+.submit{width:100%;min-height:57px;margin-top:24px}
+.status{display:none;margin-top:14px;padding:12px;border-radius:12px}
+.status.success{display:block;color:var(--teal-light);background:rgba(0,205,191,.12)}
+.status.error{display:block;color:var(--orange-light);background:rgba(255,135,81,.12)}
+footer{position:relative;padding:40px 0;text-align:center;border-top:1px solid rgba(255,255,255,.07);color:var(--muted)}
+.telegram{color:var(--teal-light);font-weight:900}
+.telegram i{font-size:1.5rem}
+.copy{margin-top:12px;font-size:.82rem}
+.creator{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin-top:22px;padding-top:19px;border-top:1px solid rgba(255,255,255,.07);font-size:.84rem}
+.creator a{color:var(--teal-light);font-weight:900}
+.creator .orange-link{color:var(--orange-light)}
+.creator a:hover{text-decoration:underline}
+.telegram-confirm,.info-modal,.guide-modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:20px;background:rgba(1,7,9,.78);backdrop-filter:blur(10px);opacity:0;pointer-events:none;transition:opacity .28s var(--ease)}
+.telegram-confirm.show,.info-modal.show,.guide-modal.show{opacity:1;pointer-events:auto}
+.telegram-confirm__panel,.info-modal__panel,.guide-panel{position:relative;width:min(580px,100%);max-height:85vh;overflow:auto;padding:34px 28px 26px;border:1px solid rgba(255,177,132,.55);border-radius:26px;background:radial-gradient(circle at 50% 0%,rgba(255,135,81,.22),transparent 42%),#10242d;box-shadow:0 34px 85px rgba(0,0,0,.64);transform:translateY(22px) scale(.96);transition:transform .34s var(--ease)}
+.telegram-confirm__panel{text-align:center;width:min(460px,100%)}
+.guide-panel{width:min(800px,100%);background:radial-gradient(circle at 92% 8%,rgba(0,205,191,.20),transparent 28%),radial-gradient(circle at 6% 92%,rgba(255,135,81,.17),transparent 27%),#10242d}
+.telegram-confirm.show .telegram-confirm__panel,.info-modal.show .info-modal__panel,.guide-modal.show .guide-panel{transform:translateY(0) scale(1)}
+.telegram-confirm__icon,.info-modal__icon{width:66px;height:66px;display:grid;place-items:center;margin:0 auto 17px;border-radius:20px;color:#061014;background:linear-gradient(135deg,var(--orange-light),var(--orange));font-size:2rem}
+.telegram-confirm h2,.info-modal h2,.guide-panel h2{margin:0;font-size:1.65rem;line-height:1.15;letter-spacing:-.04em}
+.telegram-confirm p,.info-modal__lead{margin:12px 0 0;color:#b9d0d8;font-size:.91rem}
+.telegram-confirm__ok,.telegram-confirm__cancel{width:100%;border:0;cursor:pointer;font-weight:900}
+.telegram-confirm__ok{min-height:49px;margin-top:23px;border-radius:999px;color:#061014;background:linear-gradient(135deg,var(--orange-light),var(--orange));box-shadow:0 12px 28px rgba(255,135,81,.24)}
+.telegram-confirm__cancel{min-height:40px;margin-top:7px;color:var(--muted);background:transparent}
+.telegram-confirm__cancel:hover{color:var(--teal-light)}
+.info-modal__close,.guide-close{position:absolute;top:13px;right:15px;width:37px;height:37px;border:0;border-radius:50%;cursor:pointer;color:var(--text);background:rgba(255,255,255,.09);font-size:1.25rem}
+.info-modal__list{display:grid;gap:10px;margin:19px 0 0;padding:0;list-style:none}
+.info-modal__list li{display:flex;gap:10px;color:var(--muted);font-size:.92rem}
+.info-modal__list i{color:var(--teal-light);margin-top:5px}
+.info-modal__result{margin:17px 0 0;color:var(--orange-light);font-weight:800;font-size:.9rem}
+.guide-label{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid rgba(0,205,191,.28);border-radius:999px;color:var(--teal-light);background:rgba(0,205,191,.08);font-size:.68rem;font-weight:900;letter-spacing:1px;text-transform:uppercase}
+.guide-intro{margin:12px 0 0;color:var(--muted);font-size:.91rem}
+.guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:23px}
+.guide-item{display:flex;gap:12px;min-height:116px;padding:16px;border:1px solid var(--border);border-radius:17px;background:rgba(5,22,28,.58)}
+.guide-item.warning{grid-column:1/-1}
+.guide-icon{width:38px;height:38px;flex:0 0 38px;display:grid;place-items:center;border-radius:12px;color:var(--teal-light);background:rgba(0,205,191,.13)}
+.guide-item.warning .guide-icon,.guide-item.orange .guide-icon{color:var(--orange-light);background:rgba(255,135,81,.14)}
+.guide-item h3{margin:0;font-size:.96rem;line-height:1.25}
+.guide-item p{margin:5px 0 0;color:var(--muted);font-size:.81rem;line-height:1.45}
+.guide-footer{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08)}
+.guide-tip{color:var(--muted);font-size:.82rem}
+.guide-tip i{color:var(--orange-light)}
+.guide-tg{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 15px;border-radius:999px;color:#061014;background:linear-gradient(135deg,var(--orange-light),var(--orange));font-size:.82rem;font-weight:900}
+.guide-float{position:fixed;z-index:35;left:22px;bottom:22px;display:inline-flex;align-items:center;gap:9px;min-height:51px;padding:0 17px;border:0;border-radius:999px;cursor:pointer;color:#061014;background:linear-gradient(135deg,var(--teal-light),var(--teal));box-shadow:0 14px 34px rgba(0,205,191,.27);font-weight:900;font-size:.82rem;transition:.25s var(--ease)}
+.guide-float:hover{transform:translateY(-4px)}
+.call-float{position:fixed;z-index:35;right:22px;bottom:22px;width:53px;height:53px;display:grid;place-items:center;border-radius:50%;color:#180d08;background:linear-gradient(135deg,var(--orange-light),var(--orange));box-shadow:0 14px 34px rgba(255,135,81,.30);font-size:1.15rem;transition:.25s var(--ease)}
+.call-float:hover{transform:translateY(-4px) scale(1.06)}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.show{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media(max-width:900px){.hero-grid,.about-grid,.session{grid-template-columns:1fr}.hero{text-align:center}.photo{margin:0 auto}.hero-buttons,.badges{justify-content:center}.values{grid-template-columns:1fr 1fr}.stamp{margin-top:10px}}
+@media(max-width:650px){body{font-size:14px}.container{width:min(100% - 28px,1180px)}.nav{min-height:58px;flex-direction:column;padding:7px 0;gap:5px}.logo{font-size:.82rem}.nav-actions{gap:7px}.phone{display:inline-flex;padding:6px 10px;font-size:.72rem}.nav-actions .btn{min-height:34px;padding:7px 11px;font-size:.72rem}.hero{min-height:auto;padding:48px 0 56px}.hero h1{margin-top:11px;font-size:clamp(2.7rem,14vw,3.8rem)}.hero p{margin:10px 0 0;font-size:.89rem}.eyebrow,.tag{padding:5px 9px;font-size:.59rem}.badges,.hero-buttons,.checks{margin-top:15px;gap:7px}.badge{padding:6px 8px;font-size:.68rem}.hero-buttons .btn{min-height:40px;padding:9px 13px;font-size:.76rem}.photo{width:min(330px,86%)}.photo-slider{border-radius:22px}.slider-btn{width:32px;height:32px;font-size:.95rem}.slider-btn.prev{left:8px}.slider-btn.next{right:8px}.slider-dot{width:8px;height:8px}.floating-card{right:-9px;bottom:16px;padding:8px 10px;border-radius:11px;font-size:.62rem}section{padding:55px 0}.title{margin-top:10px;font-size:clamp(1.72rem,8vw,2.25rem)}.sub{font-size:.85rem}.feature-grid,.values,.faq-grid,.form-row,.guide-grid{grid-template-columns:1fr;gap:10px;margin-top:24px}.card{padding:17px;border-radius:16px}.feature{min-height:124px;padding:15px}.feature i{font-size:1.28rem}.feature h3{margin-top:8px;font-size:.82rem}.feature small{margin-top:4px;font-size:.62rem}.about-grid{gap:25px;margin-top:20px}.about-copy{gap:13px}.about-copy p{font-size:.84rem}.achievement{gap:8px;font-size:.84rem}.stats{gap:9px}.stat b{font-size:1.65rem}.stat span{font-size:.72rem}.calorie-section{padding:0 0 55px}.calorie-card{grid-template-columns:1fr;gap:13px;padding:18px;text-align:center;border-radius:18px}.calorie-info{flex-direction:column;gap:8px}.calorie-icon{width:44px;height:44px;flex-basis:44px;border-radius:13px;font-size:1.25rem}.calorie-info h3{font-size:.86rem}.calorie-info p{font-size:.74rem}.calorie-count{text-align:center}.calorie-count b{font-size:2.4rem}.calorie-count span{font-size:.68rem}.session{padding:23px 18px;gap:20px}.session h2{font-size:clamp(1.85rem,9vw,2.45rem)}.session-list{font-size:.81rem}.session-list li{margin-top:6px}.stamp{width:160px;height:160px;font-size:.75rem}.stamp b{font-size:2.5rem}.values{grid-template-columns:1fr}.value i,.faq i{font-size:1.15rem}.value h3,.faq h3{margin:8px 0;font-size:.9rem}.value p,.faq p{font-size:.78rem}.form-shell{padding:18px}.group{margin-top:12px}.group label{margin-bottom:5px;font-size:.78rem}input[type=text],input[type=tel],input[type=number],textarea{padding:10px 11px;border-radius:10px;font-size:.82rem}textarea{min-height:78px}.range-head{font-size:.7rem}.goal-grid{grid-template-columns:repeat(2,1fr);gap:7px}.goal span{min-height:49px;padding:8px;font-size:.76rem}.check{padding:7px 9px;font-size:.73rem}.submit{min-height:45px;margin-top:18px;font-size:.78rem}.status{font-size:.75rem}.creator{flex-direction:column;gap:4px;font-size:.74rem}.creator .divider{display:none}footer{padding:28px 0}.copy{font-size:.7rem}.telegram{font-size:.85rem}.telegram i{font-size:1.25rem}.info-modal__panel,.guide-panel,.telegram-confirm__panel{padding:26px 17px 18px;border-radius:20px}.telegram-confirm h2,.info-modal h2,.guide-panel h2{font-size:1.35rem}.telegram-confirm p,.info-modal__lead,.guide-intro{font-size:.8rem}.telegram-confirm__icon,.info-modal__icon{width:52px;height:52px;margin-bottom:12px;border-radius:16px;font-size:1.55rem}.telegram-confirm__ok{min-height:43px;margin-top:17px;font-size:.8rem}.telegram-confirm__cancel{font-size:.76rem}.info-modal__list{gap:7px;margin-top:14px}.info-modal__list li{font-size:.8rem}.info-modal__result{font-size:.78rem}.guide-grid{margin-top:16px}.guide-item{min-height:0;padding:12px;gap:9px}.guide-item.warning{grid-column:auto}.guide-icon{width:32px;height:32px;flex-basis:32px;border-radius:10px;font-size:.82rem}.guide-item h3{font-size:.82rem}.guide-item p{font-size:.72rem}.guide-footer{flex-direction:column;align-items:stretch;gap:11px;margin-top:15px;padding-top:13px}.guide-tip{font-size:.72rem}.guide-tg{width:100%;padding:9px;font-size:.75rem}.guide-float{left:13px;bottom:13px;width:45px;height:45px;min-height:45px;justify-content:center;padding:0;border-radius:50%;font-size:1rem}.guide-float span{display:none}.call-float{right:13px;bottom:13px;width:45px;height:45px;font-size:1rem}.float-icons i{font-size:3.1rem!important}.orb.a{width:420px;height:420px}.orb.b{width:390px;height:390px}.grid{background-size:42px 42px}}
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="grid"></div>
+<div class="aurora"><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div></div>
+<div class="float-icons" aria-hidden="true"><i class="fas fa-dumbbell"></i><i class="fas fa-heart-pulse"></i><i class="fas fa-fire"></i><i class="fas fa-person-running"></i><i class="fas fa-bolt"></i><i class="fas fa-person-biking"></i></div>
+
+<header class="header" id="header">
+  <div class="container nav">
+    <a class="logo" href="#top">Тренер сети <span>DDX Fitness</span> · Армавир</a>
+    <div class="nav-actions">
+      <a class="phone" href="tel:+79180931237"><i class="fas fa-phone"></i> +7 918 093-12-37</a>
+      <a class="btn orange" href="https://t.me/mr_fitness" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram-plane"></i> Связаться</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <span class="eyebrow"><i class="fas fa-dumbbell"></i> Персональный тренер</span>
+      <h1>Карен<br><span class="teal">Карапетян</span></h1>
+      <p>Персональный тренер · стаж 5 лет</p>
+      <div class="badges">
+        <span class="badge"><i class="fas fa-medal"></i> Мастер Спорта по дзюдо</span>
+        <span class="badge"><i class="fas fa-trophy"></i> Призёр Универсиады</span>
+      </div>
+      <div class="hero-buttons">
+        <a class="btn teal-btn" href="#form">Начать трансформацию <i class="fas fa-arrow-right"></i></a>
+        <a class="btn outline" href="#about">О тренере</a>
+      </div>
+    </div>
+    <div class="photo reveal">
+      <div class="photo-slider" id="photoSlider">
+        <button class="slider-btn prev" id="sliderPrev" type="button" aria-label="Предыдущее фото"><i class="fas fa-chevron-left"></i></button>
+        <div class="photo-slide active">
+          <img src="https://raw.githubusercontent.com/alseminikhin-lang/kareFit/main/1.png" alt="Карен Карапетян — главное фото" loading="eager">
+        </div>
+        <div class="photo-slide">
+          <img src="https://raw.githubusercontent.com/alseminikhin-lang/kareFit/main/2.jpg" alt="Карен Карапетян — фото 2" loading="lazy">
+        </div>
+        <div class="photo-slide">
+          <img src="https://raw.githubusercontent.com/alseminikhin-lang/kareFit/main/3.jpg" alt="Карен Карапетян — фото 3" loading="lazy">
+        </div>
+        <div class="photo-slide">
+          <img src="https://raw.githubusercontent.com/alseminikhin-lang/kareFit/main/4.jpg" alt="Карен Карапетян — фото 4" loading="lazy">
+        </div>
+        <div class="slider-nav" id="sliderNav"></div>
+        <button class="slider-btn next" id="sliderNext" type="button" aria-label="Следующее фото"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="floating-card"><i class="fas fa-chart-line"></i> Понятный путь к результату</div>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="container reveal">
+    <span class="tag">Направления</span>
+    <h2 class="title">Специализация</h2>
+    <div class="feature-grid">
+      <button class="card feature" data-info="correction" type="button"><i class="fas fa-arrows-alt"></i><h3>Коррекция фигуры</h3><small>Нажмите, чтобы узнать подробнее</small></button>
+      <button class="card feature" data-info="ofp" type="button"><i class="fas fa-heart-pulse"></i><h3>Общая физическая подготовка (ОФП)</h3><small>Нажмите, чтобы узнать подробнее</small></button>
+      <button class="card feature" data-info="nutrition" type="button"><i class="fas fa-utensils"></i><h3>Индивидуальные программы питания</h3><small>Нажмите, чтобы узнать подробнее</small></button>
+      <button class="card feature" data-info="training" type="button"><i class="fas fa-dumbbell"></i><h3>Индивидуальные программы тренировок</h3><small>Нажмите, чтобы узнать подробнее</small></button>
+      <button class="card feature" data-info="online" type="button"><i class="fas fa-laptop"></i><h3>Онлайн-сопровождение</h3><small>Нажмите, чтобы узнать подробнее</small></button>
+      <button class="card feature" data-info="beginners" type="button"><i class="fas fa-child"></i><h3>Тренировки для начинающих</h3><small>Нажмите, чтобы узнать подробнее</small></button>
+      <button class="card feature" data-info="teens" type="button"><i class="fas fa-users"></i><h3>Тренировки для подростков (16+)</h3><small>Нажмите, чтобы узнать подробнее</small></button>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container reveal">
+    <span class="tag">Достижения</span>
+    <h2 class="title">О <span class="teal">тренере</span></h2>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>Меня зовут Карен, и я ваш персональный тренер с 6-летним опытом в фитнесе и с 16-летним опытом в спорте высших достижений. Моя задача — не просто изменить физическую форму, а подарить дисциплину, энергию и новое качество жизни.</p>
+        <p>Я создаю доверительную и комфортную среду, где вы можете открыто обсуждать цели, задавать любые вопросы и прогрессировать в удобном для вас ритме. Вместе мы выстроим систему: от сбалансированного питания и грамотных нагрузок до качественного восстановления, чтобы вы чувствовали лёгкость, тонус и уверенность в повседневной жизни.</p>
+        <p>Со мной тренировки перестанут быть рутиной. Каждая сессия — это продуманный сценарий, который мягко, но настойчиво развивает вашу силу, выносливость и работоспособность, превращая путь к результату в увлекательный и мотивирующий процесс.</p>
+        <p>Я не просто показываю упражнения, а учу понимать сигналы своего тела, выстраивать устойчивые привычки и достигать целей без экстремальных диет, перетренированности и риска травм. Прогресс, который остаётся с вами надолго.</p>
+        <p>Моя экспертиза — безопасная коррекция фигуры, гармоничный набор мышечной массы, функциональный тренинг и подготовка спортсменов к соревнованиям: единоборства, кроссфит и силовое многоборье. Я работаю с атлетами любого уровня, помогая им преодолевать плато, обновлять личные рекорды и уверенно выступать на соревнованиях.</p>
+        <ul class="achievement">
+          <li><i class="fas fa-medal"></i><span><strong>МС</strong> | Дан по дзюдо</span></li>
+          <li><i class="fas fa-award"></i><span><strong>Бронзовый призёр</strong> Всероссийской универсиады по дзюдо 🏅, г. Казань</span></li>
+          <li><i class="fas fa-star"></i><span>Победитель и призёр Всероссийских, региональных и областных турниров по дзюдо</span></li>
+          <li><i class="fas fa-certificate"></i><span>Сертифицированный специалист по функциональному тренингу</span></li>
+        </ul>
+      </div>
+      <div class="stats">
+        <div class="card stat"><b>5+</b><span>лет стажа</span></div>
+        <div class="card stat"><b>МС</b><span>по дзюдо</span></div>
+        <div class="card stat"><b>16+</b><span>тренировки для подростков</span></div>
+        <div class="card stat"><b>Онлайн</b><span>сопровождение</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="calorie-section">
+  <div class="container reveal">
+    <div class="calorie-card">
+      <div class="calorie-info">
+        <div class="calorie-icon"><i class="fas fa-fire"></i></div>
+        <div><h3>Пока вы изучаете сайт, вы уже делаете первый шаг</h3><p>Движение начинается с решения. А с правильной программой можно двигаться к цели стабильно и безопасно.</p></div>
+      </div>
+      <div class="calorie-count"><b id="calorieCount">0</b><span>ккал «сожжено</span> за просмотр</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container reveal">
+    <div class="session-wrap">
+      <div class="session">
+        <div>
+          <span class="tag">Для новых клиентов</span>
+          <h2>Первая тренировка <span class="teal">бесплатно</span></h2>
+          <p class="sub">Стартовая встреча, на которой определим вашу точку А и наметим понятный маршрут к цели.</p>
+          <ul class="session-list">
+            <li><i class="fas fa-check-circle"></i> Обсудим цель, опыт и ожидания</li>
+            <li><i class="fas fa-check-circle"></i> Оценим физическую подготовку</li>
+            <li><i class="fas fa-check-circle"></i> Учтём травмы и ограничения</li>
+            <li><i class="fas fa-check-circle"></i> Составим первые шаги программы</li>
+          </ul>
+          <a class="btn orange" href="#form">Записаться бесплатно</a>
+        </div>
+        <div class="stamp"><div><b>0 ₽</b><br>Первая тренировка</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="container reveal">
+    <span class="tag">Подход</span>
+    <h2 class="title">Почему выбирают <span class="teal">личного тренера</span></h2>
+    <div class="values">
+      <article class="card value"><i class="fas fa-user-check"></i><h3>План под вас</h3><p>Учитываются цель, уровень, график и ограничения.</p></article>
+      <article class="card value"><i class="fas fa-chart-line"></i><h3>Контроль прогресса</h3><p>Нагрузка корректируется по ходу результата.</p></article>
+      <article class="card value"><i class="fas fa-shield-heart"></i><h3>Техника и безопасность</h3><p>Постепенная нагрузка и правильное движение.</p></article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container reveal">
+    <span class="tag">Вопросы</span>
+    <h2 class="title">Ответы на важные <span class="teal">вопросы</span></h2>
+    <div class="faq-grid">
+      <article class="card faq"><i class="fas fa-ruble-sign"></i><h3>Сколько стоит?</h3><p>Стоимость зависит от формата и длительности абонемента. Напишите для подбора варианта.</p></article>
+      <article class="card faq"><i class="fas fa-heart-pulse"></i><h3>Можно с травмой?</h3><p>Только после консультации с врачом и с учётом подтверждённых ограничений.</p></article>
+      <article class="card faq"><i class="fas fa-clock"></i><h3>Как часто заниматься?</h3><p>Обычно 2–3 раза в неделю для начинающих; точный план зависит от цели.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="form">
+  <div class="container reveal">
+    <div class="card form-shell">
+      <span class="tag"><i class="fab fa-telegram-plane"></i> Связь</span>
+      <h2 class="title">Заполните <span class="teal">анкету</span></h2>
+      <p class="sub">После заполнения появится окно с предупреждением о VPN. Telegram откроется только после нажатия кнопки «ОК, открыть Telegram</p>
+      <form id="trainerForm" novalidate>
+        <div class="form-row">
+          <div class="group"><label for="name">Имя <span class="required">*</span></label><input id="name" type="text" placeholder="Как вас зовут?"></div>
+          <div class="group"><label for="phone">Телефон <span class="required">*</span></label><input id="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00"></div>
+        </div>
+        <div class="form-row">
+          <div class="group"><label for="age">Возраст <span class="required">*</span></label><input id="age" type="number" min="16" max="100" placeholder="Например: 28"></div>
+          <div class="group"><label for="restrictions">Ограничения</label><input id="restrictions" type="text" placeholder="Травмы, заболевания или «нет"></div>
+        </div>
+        <div class="form-row">
+          <div class="group"><label for="height">Рост, см</label><div class="range-head"><span>140</span><b id="heightValue">175</b><span>220</span></div><input id="height" type="range" min="140" max="220" value="175"></div>
+          <div class="group"><label for="weight">Вес, кг</label><div class="range-head"><span>40</span><b id="weightValue">70</b><span>180</span></div><input id="weight" type="range" min="40" max="180" value="70"></div>
+        </div>
+        <div class="group"><label>Основная цель <span class="required">*</span></label>
+          <div class="goal-grid">
+            <label class="goal"><input type="checkbox" name="goal" value="Похудение"><span><i class="fas fa-weight-scale"></i> Похудение</span></label>
+            <label class="goal"><input type="checkbox" name="goal" value="Набор мышечной массы"><span><i class="fas fa-dumbbell"></i> Набор мышечной массы</span></label>
+            <label class="goal"><input type="checkbox" name="goal" value="Поставить технику"><span><i class="fas fa-person-running"></i> Поставить технику</span></label>
+            <label class="goal"><input type="checkbox" name="goal" value="Выносливость"><span><i class="fas fa-heart-pulse"></i> Выносливость</span></label>
+            <label class="goal"><input type="checkbox" name="goal" value="Подготовка к соревнованиям"><span><i class="fas fa-trophy"></i> Подготовка к соревнованиям</span></label>
+          </div>
+        </div>
+        <div class="group"><label>Что вас интересует? <span class="required">*</span></label>
+          <div class="checks">
+            <label class="check"><input type="checkbox" name="format" value="Офлайн-тренировки"> Офлайн-тренировки</label>
+            <label class="check"><input type="checkbox" name="format" value="Онлайн-сопровождение"> Онлайн-сопровождение</label>
+            <label class="check"><input type="checkbox" name="format" value="План питания"> План питания</label>
+          </div>
+        </div>
+        <div class="group"><label for="goalText">Цель подробно <span class="required">*</span></label><textarea id="goalText" placeholder="Например: похудеть на 10 кг и улучшить выносливость"></textarea></div>
+        <div class="group"><label for="time">Удобное время связи <span class="required">*</span></label><input id="time" type="text" placeholder="Например: будни после 18:00"></div>
+        <button class="btn orange submit" type="submit"><i class="fab fa-telegram-plane"></i> Сформировать сообщение в Telegram</button>
+      </form>
+      <div id="status" class="status" role="status"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <a class="telegram" href="https://t.me/mr_fitness" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i> @mr_fitness</a>
+    <div class="copy">2026 Карен Карапетян · Тренер сети клубов DDX Fitness · Армавир</div>
+    <div class="creator">
+      <span>Создатель сайта:</span><a href="https://t.me/kazus_studio" target="_blank" rel="noopener noreferrer">@kazus_studio</a>
+      <span class="divider">|</span>
+      <span>Хочешь так же?</span><a class="orange-link" href="https://t.me/kazus_studio" target="_blank" rel="noopener noreferrer">Напиши мне</a>
+    </div>
+  </div>
+</footer>
+
+<button class="guide-float" id="openGuide" type="button" aria-haspopup="dialog" aria-controls="guideModal"><i class="fas fa-clipboard-check"></i><span>Гайд к первой тренировке</span></button>
+<a class="call-float" href="tel:+79180931237" aria-label="Позвонить тренеру"><i class="fas fa-phone"></i></a>
+
+<div class="telegram-confirm" id="telegramConfirm" role="dialog" aria-modal="true" aria-labelledby="telegramConfirmTitle" aria-hidden="true">
+  <div class="telegram-confirm__panel">
+    <div class="telegram-confirm__icon"><i class="fab fa-telegram-plane"></i></div>
+    <h2 id="telegramConfirmTitle">Сообщение готово</h2>
+    <p>Сейчас откроется Telegram с заполненной заявкой для тренера. Если Telegram не открывается, включите VPN для корректной работы ссылки.</p>
+    <a class="telegram-confirm__ok" id="telegramConfirmOk" href="https://t.me/mr_fitness" target="_self"><i class="fas fa-check"></i> ОК, открыть Telegram</a>
+    <button class="telegram-confirm__cancel" id="telegramConfirmCancel" type="button">Остаться на сайте</button>
+  </div>
+</div>
+
+<div class="info-modal" id="infoModal" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle" aria-hidden="true">
+  <div class="info-modal__panel">
+    <button class="info-modal__close" id="infoModalClose" type="button" aria-label="Закрыть"></button>
+    <div class="info-modal__icon" id="infoModalIcon"><i class="fas fa-dumbbell"></i></div>
+    <h2 id="infoModalTitle"></h2>
+    <p class="info-modal__lead" id="infoModalLead"></p>
+    <ul class="info-modal__list" id="infoModalList"></ul>
+    <p class="info-modal__result" id="infoModalResult"></p>
+  </div>
+</div>
+
+<div class="guide-modal" id="guideModal" role="dialog" aria-modal="true" aria-labelledby="guideTitle" aria-hidden="true">
+  <div class="guide-panel">
+    <button class="guide-close" id="closeGuide" type="button" aria-label="Закрыть гайд"></button>
+    <span class="guide-label"><i class="fas fa-sparkles"></i> Полезно перед стартом</span>
+    <h2 id="guideTitle">Гайд к первой тренировке</h2>
+    <p class="guide-intro">Всё, что нужно, чтобы чувствовать себя спокойно и комфортно на первом занятии.</p>
+    <div class="guide-grid">
+      <article class="guide-item"><div class="guide-icon"><i class="fas fa-shoe-prints"></i></div><div><h3>Сменная обувь</h3><p>Возьмите чистые удобные кроссовки с нескользящей подошвой.</p></div></article>
+      <article class="guide-item"><div class="guide-icon"><i class="fas fa-shirt"></i></div><div><h3>Удобная форма</h3><p>Одежда не должна сковывать движения: приседания, наклоны и выпады.</p></div></article>
+      <article class="guide-item"><div class="guide-icon"><i class="fas fa-bottle-water"></i></div><div><h3>Вода</h3><p>Возьмите бутылку воды и пейте небольшими глотками по самочувствию.</p></div></article>
+      <article class="guide-item"><div class="guide-icon"><i class="fas fa-utensils"></i></div><div><h3>Лёгкий приём пищи</h3><p>Лучше не приходить натощак или сразу после плотного обеда: лёгкий перекус за 1–2 часа обычно комфортнее.</p></div></article>
+      <article class="guide-item"><div class="guide-icon"><i class="fas fa-bed"></i></div><div><h3>Сон и восстановление</h3><p>Постарайтесь выспаться. О тяжёлой работе или бессонной ночи сообщите до занятия.</p></div></article>
+      <article class="guide-item orange"><div class="guide-icon"><i class="fas fa-shower"></i></div><div><h3>Если планируете душ</h3><p>Положите полотенце, тапочки и средства личной гигиены.</p></div></article>
+      <article class="guide-item warning"><div class="guide-icon"><i class="fas fa-heart-pulse"></i></div><div><h3>Если плохо себя чувствуете</h3><p>При боли в груди, головокружении, температуре, необычной одышке или обострении травмы тренировку лучше отложить и при необходимости обратиться к врачу. О травмах, заболеваниях, лекарствах и рекомендациях врача сообщите тренеру заранее.</p></div></article>
+    </div>
+    <div class="guide-footer">
+      <div class="guide-tip"><i class="fas fa-lightbulb"></i> Главное — приходите. Нагрузка на первой встрече подбирается под вас.</div>
+      <a class="guide-tg" href="https://t.me/mr_fitness" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram-plane"></i> Задать вопрос</a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){'use strict';var username='mr_fitness';var header=document.getElementById('header'),form=document.getElementById('trainerForm'),phone=document.getElementById('phone'),age=document.getElementById('age'),height=document.getElementById('height'),weight=document.getElementById('weight'),heightValue=document.getElementById('heightValue'),weightValue=document.getElementById('weightValue'),status=document.getElementById('status'),confirmBox=document.getElementById('telegramConfirm'),confirmOk=document.getElementById('telegramConfirmOk'),confirmCancel=document.getElementById('telegramConfirmCancel'),infoModal=document.getElementById('infoModal'),infoClose=document.getElementById('infoModalClose'),infoTitle=document.getElementById('infoModalTitle'),infoLead=document.getElementById('infoModalLead'),infoList=document.getElementById('infoModalList'),infoResult=document.getElementById('infoModalResult'),infoIcon=document.getElementById('infoModalIcon'),guideModal=document.getElementById('guideModal'),openGuide=document.getElementById('openGuide'),closeGuide=document.getElementById('closeGuide'),calorieCount=document.getElementById('calorieCount'),photoSlider=document.getElementById('photoSlider'),sliderPrev=document.getElementById('sliderPrev'),sliderNext=document.getElementById('sliderNext'),sliderNav=document.getElementById('sliderNav');var info={correction:{icon:'fa-arrows-alt',title:'Коррекция фигуры',lead:'Это персональный план тренировок и привычек, направленный на изменение пропорций тела: снижение процента жира, набор мышц, более подтянутый силуэт и улучшение осанки.',list:['Оцениваем стартовую точку: цели, замеры, тренировочный опыт и образ жизни.','Подбираем упражнения и нагрузку под ваш уровень, а не используем случайные схемы из интернета.','Добавляем постепенное развитие силы, выносливости и мышечного тонуса.','Разбираем базовые рекомендации по питанию, режиму и восстановлению.','Регулярно отслеживаем прогресс и корректируем план.'],result:'Подходит тем, кто хочет менять тело системно, безопасно и без экстремальных диет.'},ofp:{icon:'fa-heart-pulse',title:'ОФП — общая физическая подготовка',lead:'ОФП — это фундамент физической формы. Она развивает силу, выносливость, координацию, подвижность и помогает легче переносить обычные и спортивные нагрузки.',list:['Укрепляем основные мышечные группы и корпус.','Развиваем выносливость и работу сердечно-сосудистой системы.','Улучшаем мобильность суставов, баланс и координацию.','Осваиваем безопасную технику базовых движений: приседаний, тяг, жимов, выпадов и других.','Постепенно повышаем нагрузку без резких скачков.'],result:'Подходит новичкам, тем, кто возвращается к спорту, и людям, которым важно улучшить самочувствие и общий тонус.'},nutrition:{icon:'fa-utensils',title:'Индивидуальные программы питания',lead:'Это не строгая диета, а понятная система питания, которую можно соблюдать в реальной жизни и сочетать с тренировками.',list:['Определяем цель: похудение, набор массы или поддержание текущей формы.','Рассчитываем ориентир по калорийности и балансу белков, жиров и углеводов.','Учитываем привычки, график, предпочтения и возможные ограничения по продуктам.','Разбираем удобные варианты приёмов пищи и простые замены продуктов.','Корректируем рекомендации по самочувствию и динамике результата.'],result:'Подходит тем, кто хочет выстроить устойчивое питание без жёстких запретов и постоянного чувства вины.'},training:{icon:'fa-dumbbell',title:'Индивидуальные программы тренировок',lead:'Полностью персонализированный план с учётом вашего уровня, целей и инвентаря.',list:['Тренировки в зале или дома.','Подбор упражнений под вашу анатомию и задачи.','Постоянная корректировка сложности.','Видео-инструкции и обратная связь.'],result:'План меняется вместе с вами, чтобы всегда оставаться эффективным.'},online:{icon:'fa-laptop',title:'Онлайн-сопровождение',lead:'Формат для тех, кто тренируется самостоятельно, живёт не рядом с залом или хочет получать план и поддержку в удобном режиме.',list:['Персональная программа тренировок под дом, зал или доступный инвентарь.','Объяснения по технике и возможность отправлять видео упражнений для разбора.','Связь в мессенджере: вопросы, корректировки и контроль выполнения плана.','Регулярное обновление нагрузки по прогрессу и самочувствию.','При необходимости — рекомендации по питанию и восстановлению.'],result:'Подходит для самостоятельных тренировок с понятным планом и обратной связью тренера.'},beginners:{icon:'fa-child',title:'Тренировки для начинающих',lead:'Специальный формат для тех, кто боится спортзала или раньше не занимался.',list:['Пошаговое обучение базовым движениям.','Минимальный стресс и постепенное увеличение нагрузки.','Психологическая поддержка и разбор страхов.','Формирование привычки к регулярным занятиям.'],result:'Вы поймёте, что спорт — это просто и приятно, и увидите результаты.'},teens:{icon:'fa-users',title:'Тренировки для подростков (16+)',lead:'Программа адаптируется под возрастные особенности и текущий уровень подготовки.',list:['Укрепление опорно-двигательного аппарата.','Работа над осанкой и профилактика перегрузок.','Развитие общей физической формы без резких нагрузок.','Формирование здоровых привычек и безопасной техники.'],result:'Тренировки проходят с акцентом на технику, постепенный прогресс и безопасность.'}};var currentSlide=0;var slides=photoSlider.querySelectorAll('.photo-slide');var totalSlides=slides.length;function createDots(){sliderNav.innerHTML='';for(var i=0;i<totalSlides;i++){var dot=document.createElement('button');dot.className='slider-dot'+(i===0?' active':'');dot.type='button';dot.setAttribute('aria-label','Показать фото '+(i+1));dot.addEventListener('click',function(idx){return function(){goToSlide(idx)}}(i));sliderNav.appendChild(dot)}}function updateSlider(){slides.forEach(function(slide,idx){slide.classList.toggle('active',idx===currentSlide)});var dots=sliderNav.querySelectorAll('.slider-dot');dots.forEach(function(dot,idx){dot.classList.toggle('active',idx===currentSlide)})}function goToSlide(idx){currentSlide=idx;if(currentSlide<0)currentSlide=totalSlides-1;if(currentSlide>=totalSlides)currentSlide=0;updateSlider()}sliderPrev.addEventListener('click',function(){goToSlide(currentSlide-1)});sliderNext.addEventListener('click',function(){goToSlide(currentSlide+1)});createDots();function toggleHeader(){header.classList.toggle('scrolled',window.scrollY>10)}window.addEventListener('scroll',toggleHeader,{passive:true});toggleHeader();var reveals=document.querySelectorAll('.reveal');for(var r=0;r<reveals.length;r++)reveals[r].classList.add('show');var startedAt=Date.now();window.setInterval(function(){calorieCount.textContent=Math.min(4,Math.floor((Date.now()-startedAt)/4500))},1000);height.addEventListener('input',function(){heightValue.textContent=height.value});weight.addEventListener('input',function(){weightValue.textContent=weight.value});phone.addEventListener('input',function(){var d=phone.value.replace(/\D/g,'');if(d.charAt(0)==='8')d='7'+d.slice(1);if(d&&d.charAt(0)!=='7')d='7'+d;d=d.slice(0,11);var out='+7';if(d.length>1)out+=' ('+d.slice(1,4);if(d.length>=4)out+=') '+d.slice(4,7);if(d.length>=7)out+='-'+d.slice(7,9);if(d.length>=9)out+='-'+d.slice(9,11);phone.value=out});function getChecked(name){var all=document.querySelectorAll('input[name="'+name+'"]:checked'),list=[];for(var i=0;i<all.length;i++)list.push(all[i].value);return list}function showStatus(text,type){status.textContent=text;status.className='status '+type}function openConfirm(url){confirmOk.href=url;confirmBox.classList.add('show');confirmBox.setAttribute('aria-hidden','false');document.body.classList.add('modal-open')}function closeConfirm(){confirmBox.classList.remove('show');confirmBox.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open')}function openInfo(key){var d=info[key];if(!d)return;infoIcon.innerHTML='<i class="fas '+d.icon+'"></i>';infoTitle.textContent=d.title;infoLead.textContent=d.lead;infoList.innerHTML='';for(var i=0;i<d.list.length;i++){var li=document.createElement('li');li.innerHTML='<i class="fas fa-check-circle"></i><span></span>';li.querySelector('span').textContent=d.list[i];infoList.appendChild(li)}infoResult.textContent=d.result;infoModal.classList.add('show');infoModal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');infoClose.focus()}function closeInfo(){infoModal.classList.remove('show');infoModal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open')}function openGuideModal(){guideModal.classList.add('show');guideModal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');closeGuide.focus()}function closeGuideModal(){guideModal.classList.remove('show');guideModal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');openGuide.focus()}var cards=document.querySelectorAll('[data-info]');for(var c=0;c<cards.length;c++)cards[c].addEventListener('click',function(){openInfo(this.getAttribute('data-info'))});infoClose.addEventListener('click',closeInfo);infoModal.addEventListener('click',function(e){if(e.target===infoModal)closeInfo()});openGuide.addEventListener('click',openGuideModal);closeGuide.addEventListener('click',closeGuideModal);guideModal.addEventListener('click',function(e){if(e.target===guideModal)closeGuideModal()});confirmCancel.addEventListener('click',closeConfirm);confirmBox.addEventListener('click',function(e){if(e.target===confirmBox)closeConfirm()});document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(guideModal.classList.contains('show'))closeGuideModal();else if(infoModal.classList.contains('show'))closeInfo();else if(confirmBox.classList.contains('show'))closeConfirm()}});form.addEventListener('submit',function(e){e.preventDefault();var name=document.getElementById('name').value.trim(),tel=phone.value.trim(),digits=tel.replace(/\D/g,''),years=Number(age.value),restrictions=document.getElementById('restrictions').value.trim()||'Нет',goalText=document.getElementById('goalText').value.trim(),time=document.getElementById('time').value.trim(),goals=getChecked('goal'),formats=getChecked('format');if(!name||digits.length!==11||!years||years<16||years>100||!goalText||!time){showStatus('Заполните имя, телефон, возраст от 16 лет, цель и удобное время связи.','error');return}if(!goals.length||!formats.length){showStatus('Выберите основную цель и хотя бы один интересующий формат.','error');return}var text=['Здравствуйте, Карен! Я заполнил(а) анкету на сайте.','','Имя: '+name,'Телефон: '+tel,'Возраст: '+years+' лет','Рост: '+height.value+' см','Вес: '+weight.value+' кг','Основная цель: '+goals.join(', '),'Интересует: '+formats.join(', '),'Цель подробно: '+goalText,'Ограничения: '+restrictions,'Удобное время для связи: '+time].join('\n');var url='https://t.me/'+username+'?text='+encodeURIComponent(text);showStatus('Сообщение сформировано. Нажмите «ОК, открыть Telegram в появившемся окне.','success');openConfirm(url)})}());
+</script>
+</body>
+</html>
